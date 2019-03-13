@@ -1,0 +1,18 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Vedligeholdelse OBBC" FontWeight="Bold" VerticalAlignment="Top" Margin="288,10,288,0" Height="44" FontSize="20"/>
+        <Button Name="AktuelleFejlRapporter" Content="Vis Aktuelle Fejlrapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,125,0,0" Height="39" Click="AktuelleFejlRapporter_Click"/>
+        <Button Name="OpretFejl" Content="Opret Fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,169,0,0" Height="39" Click="OpretFejl_Click"/>
+        <Button Name="ÆndreFejl" Content="Ændre Fejlstatus" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,213,0,0" Height="39" Click="ÆndreFejl_Click"/>
+        <Button Name="VisGamleRapporter" Content="Vis Gamle Rapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,257,0,0" Height="39" Click="VisGamleRapporter_Click"/>
+        <Button Name="RapporterEkstraInfo" Content="Vis Rapporter med ekstra Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,301,0,0" Height="39" Click="RapporterEkstraInfo_Click"/>
+
+    </Grid>
+</Window>
