@@ -1,0 +1,26 @@
+﻿-------Vedligeholdelse OBBC-------
+1. Vis Aktuelle Fejl Rapport            
+2. Opret Fejlmelding
+3. Ændre på fejlstatus
+4. Maskine Mangler Del                           
+5. Find Specifik dato         
+----------------------------------
+
+1:
+------------Vælg Område-----------
+1. Bryst(1)                         -
+2. Mave(0)                       -
+3. Arme(3)                       -
+4. Ryg(0)                       - 
+5. Core(0)                       - 
+6. Spinning(2)                    -
+7. Ben(0)                      -
+8. Alle Maskiner(6)               -
+----------------------------------
+
+1:
+----Maskiner For Område:      ----
+1. Bryst | Note: ingen | Log |	 -
+2. Bryst | Note: Maskine 420's sæde er i stykker |  10-12-2018  -
+----------------------------------
+

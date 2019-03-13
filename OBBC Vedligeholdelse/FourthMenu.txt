@@ -1,0 +1,11 @@
+﻿------------Vælg Område For Gamle Rapporter-----------
+
+1. Vis alle rapporter
+2. Vis bryst rapporter
+3. Vis ryg rapporter
+4. Vis mave rapporter
+5. Vis spinnings-rapporter
+6. Vis ben rapporter
+7. Vis arm rapporter
+
+------------------------------------------------------

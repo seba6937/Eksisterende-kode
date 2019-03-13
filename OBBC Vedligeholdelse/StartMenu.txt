@@ -1,0 +1,10 @@
+﻿ -------Vedligeholdelse OBBC-------
+ 
+1. Vis aktuelle fejlrapporter
+2. Opret Fejlmelding
+3. Ændre på fejlstatus
+4. Vis gamle rapporter
+5. Vis rapporter med extra info
+0. Exit
+
+----------------------------------

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBBC Vedligeholdelse", "OBBC Vedligeholdelse\OBBC Vedligeholdelse.csproj", "{A03FB643-4232-4ACB-A295-8FB7F2208F2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A03FB643-4232-4ACB-A295-8FB7F2208F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03FB643-4232-4ACB-A295-8FB7F2208F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03FB643-4232-4ACB-A295-8FB7F2208F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03FB643-4232-4ACB-A295-8FB7F2208F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B444D4-FD28-4855-B13C-D99819E78EE5}
+	EndGlobalSection
+EndGlobal

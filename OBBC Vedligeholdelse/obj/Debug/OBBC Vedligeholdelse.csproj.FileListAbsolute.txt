@@ -1,0 +1,7 @@
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csprojAssemblyReference.cache
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csproj.CoreCompileInputs.cache
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
+C:\gittest\pc1\OBBC-Vedligeholdelse\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb
