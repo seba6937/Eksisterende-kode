@@ -17,7 +17,7 @@ namespace OBBC_Vedligeholdelse
             {
                 try
                 {
-                    //con.Open();
+                    con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleAktuelleFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     return DatabaseReader(cmd);
@@ -34,7 +34,8 @@ namespace OBBC_Vedligeholdelse
             {
                 
                 try
-                {                        
+                {
+                    con.Open();
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeAktuelleFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
@@ -142,7 +143,8 @@ namespace OBBC_Vedligeholdelse
             {
                 
                 try
-                {                       
+                {
+                    con.Open();
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
@@ -161,7 +163,8 @@ namespace OBBC_Vedligeholdelse
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 try
-                {                    
+                {
+                    con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     return DatabaseReaderGreen(cmd);
