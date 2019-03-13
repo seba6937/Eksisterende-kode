@@ -11,20 +11,20 @@ namespace OBBC_Vedligeholdelse
 {
     public class DatabaseController
     {
-        public void GetAllCurrentReports()
+        public string GetAllCurrentReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 try
                 {
-                    con.Open();
+                    //con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleAktuelleFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    DatabaseReader(cmd);
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("UPS, " + e.Message);
+                    throw new Exception("UPS");
                 }
             }
         }
@@ -204,7 +204,7 @@ namespace OBBC_Vedligeholdelse
             }
             return _connectionString;
         }
-        private void DatabaseReader(SqlCommand cmd)
+        private string DatabaseReader(SqlCommand cmd)
         {
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
@@ -220,19 +220,17 @@ namespace OBBC_Vedligeholdelse
                     string status = reader["Status"].ToString();
                     if (status == "Gul")
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}");
-                        Console.WriteLine();
+                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
+                        return res;                        
                     }
                     else if (status == "Rød")
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}");
-                        Console.WriteLine();
-                    }
-                }
+                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
+                        return res;                        
+                    }                    
+                }                
             }
-            Console.ForegroundColor = ConsoleColor.Gray;
+            throw new Exception("Fejl");
         }
         private void DatabaseReaderGreen(SqlCommand cmd)
         {
