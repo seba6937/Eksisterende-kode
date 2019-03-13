@@ -32,93 +32,93 @@ namespace OBBC_Vedligeholdelse
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
-                {
-                    try
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("VisSpecifikkeAktuelleFejlRapporter", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                        DatabaseReader(cmd);
-                       
-                    }
-                    catch (SqlException e)
-                    {
-                        Console.WriteLine("UPS, " + e.Message);
-                    }
+                
+                try
+                {                        
+                    SqlCommand cmd = new SqlCommand("VisSpecifikkeAktuelleFejlRapporter", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Lokation", area));
+                    DatabaseReader(cmd);                       
                 }
+                catch (SqlException e)
+                {
+                    throw new Exception("Fejl");
+                }
+                
             }
         }
-        public void ChangeReportStatus(int reportID, string status)
+        public string ChangeReportStatus(int reportID, string status)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
+                
+                try
                 {
-                    try
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("ÆndreStatus", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@RapportID", reportID));
-                        cmd.Parameters.Add(new SqlParameter("@Status", status));
-                        cmd.ExecuteReader();
-                        Console.WriteLine("Rapporten fik ændret status");
-                    }
-                    catch (SqlException e)
-                    {
-                        Console.WriteLine("Fejl, " + e.Message);
-                    }
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("ÆndreStatus", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@RapportID", reportID));
+                    cmd.Parameters.Add(new SqlParameter("@Status", status));
+                    cmd.ExecuteReader();
+                    string success = "Reporten fik ændret status";
                 }
+                catch (SqlException e)
+                {
+                    throw new Exception("Fejl");
+                }
+                
+                throw new Exception("Fejl");
             }
         }
-        public void CreateReport(string area,string errorReport, string date,string extraInfo)
+        public string CreateReport(string area,string errorReport, string date,string extraInfo)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
+                
+                try
                 {
-                    try
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("InsertReport", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                        cmd.Parameters.Add(new SqlParameter("@ProblemBeskrivelse", errorReport));
-                        cmd.Parameters.Add(new SqlParameter("@Tidspunkt", date));
-                        cmd.Parameters.Add(new SqlParameter("@ExtraInfo", extraInfo));
-                        DatabaseReader(cmd);
-                        Console.WriteLine("Rapporten blev oprettet!");
-                    }
-                    catch (SqlException e)
-                    {
-                        Console.WriteLine("UPS, " + e.Message);
-                    }
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("InsertReport", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Lokation", area));
+                    cmd.Parameters.Add(new SqlParameter("@ProblemBeskrivelse", errorReport));
+                    cmd.Parameters.Add(new SqlParameter("@Tidspunkt", date));
+                    cmd.Parameters.Add(new SqlParameter("@ExtraInfo", extraInfo));
+                    DatabaseReader(cmd);
+                    string success = "Rapporten blev oprettet";
+                    return success;
                 }
+                catch (SqlException e)
+                {
+                    throw new Exception("Fejl");
+                }
+                
             }
         }
 
-        public void GetSpecificExtraInfoReports(string area)
+        public string GetSpecificExtraInfoReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
+                
+                try
                 {
-                    try
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("VisSpecifikkeMedExtraNote", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                        DatabaseReader(cmd);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("VisSpecifikkeMedExtraNote", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Lokation", area));
+                    return DatabaseReader(cmd);
 
-                    }
-                    catch (SqlException e)
-                    {
-                        Console.WriteLine("UPS, " + e.Message);
-                    }
                 }
+                catch (SqlException e)
+                {
+                    throw new Exception("Fejl");
+                }
+                
             }
         }
 
-        public void GetAllExtraInfoReports()
+        public string GetAllExtraInfoReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -127,49 +127,48 @@ namespace OBBC_Vedligeholdelse
                     con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleMedExtraNote", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    DatabaseReader(cmd);
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("UPS, " + e.Message);
+                    throw new Exception("Fejl");
                 }
             }
+            throw new Exception("Fejl");
         }
-        public void GetSpecificOldReports(string area)
+        public string GetSpecificOldReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
-                {
-                    try
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand("VisSpecifikkeRepareredeFejlRapporter", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                        DatabaseReaderGreen(cmd);
+                
+                try
+                {                       
+                    SqlCommand cmd = new SqlCommand("VisSpecifikkeRepareredeFejlRapporter", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Lokation", area));
+                    return DatabaseReaderGreen(cmd);
 
-                    }
-                    catch (SqlException e)
-                    {
-                        Console.WriteLine("UPS, " + e.Message);
-                    }
                 }
+                catch (SqlException e)
+                {
+                    throw new Exception("Fejl");
+                }
+                
             }
         }
-        public void GetAllOldReports()
+        public string GetAllOldReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 try
-                {
-                    con.Open();
+                {                    
                     SqlCommand cmd = new SqlCommand("VisAlleRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    DatabaseReaderGreen(cmd);
+                    return DatabaseReaderGreen(cmd);
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("UPS, " + e.Message);
+                    throw new Exception("Fejl");
                 }
             }
         }
@@ -199,8 +198,7 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                Console.WriteLine("Filen kunne ikke læses");
-                Console.WriteLine(e.Message);
+                throw new Exception("Fejl");
             }
             return _connectionString;
         }
@@ -232,7 +230,7 @@ namespace OBBC_Vedligeholdelse
             }
             throw new Exception("Fejl");
         }
-        private void DatabaseReaderGreen(SqlCommand cmd)
+        private string DatabaseReaderGreen(SqlCommand cmd)
         {
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
@@ -247,13 +245,13 @@ namespace OBBC_Vedligeholdelse
                     string status = reader["Status"].ToString();
                     if (status == "Grøn")
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($"RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}");
-                        Console.WriteLine();
+                        
+                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
+                        return res;
                     }
                 }
             }
-            Console.ForegroundColor = ConsoleColor.Gray;
+            throw new Exception("Fejl");
         }
     }
 }
