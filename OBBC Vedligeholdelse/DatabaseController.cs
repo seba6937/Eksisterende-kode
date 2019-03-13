@@ -24,7 +24,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("UPS");
+                    throw new Exception("UPS" + e.Message);
                 }
             }
         }
@@ -43,7 +43,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
                 
             }
@@ -65,7 +65,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
                 
                 throw new Exception("Fejl");
@@ -91,7 +91,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
                 
             }
@@ -113,7 +113,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
                 
             }
@@ -132,7 +132,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
             }
             throw new Exception("Fejl");
@@ -153,7 +153,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
                 
             }
@@ -171,7 +171,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl" + e.Message);
                 }
             }
         }
@@ -201,7 +201,7 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                throw new Exception("Fejl");
+                throw new Exception("Fejl" + e.Message);
             }
             return _connectionString;
         }
