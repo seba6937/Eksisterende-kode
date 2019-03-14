@@ -34,7 +34,9 @@ namespace GUI
 
         private void OpretFejl_Click(object sender, RoutedEventArgs e)
         {
-
+            Windows.OpretFejlmelding opretFejlmelding = new Windows.OpretFejlmelding();
+            opretFejlmelding.Show();
+            this.Close();
         }
 
         private void ÆndreFejl_Click(object sender, RoutedEventArgs e)

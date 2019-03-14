@@ -14,7 +14,7 @@
         <Button Name="BenFejl" Content="Opret ben fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,136,0,0"/>
         <Button Name="ArmeFejl" Content="Opret arme fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,170,0,0"/>
         <Label Name="NuværendeLabel" Content="Nuværende fejlmelding" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="342,0,0,0" Height="34" Width="178" FontSize="14"/>
-        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,204,0,0"/>
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,204,0,0" Click="Tilbage_Click"/>
         <TextBox Name="MeddelelseBox" HorizontalAlignment="Left" Height="68" Margin="244,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
         <Label Content="Indtast ID og Fejlmeddelelse:" HorizontalAlignment="Left" Margin="241,62,0,0" VerticalAlignment="Top"/>
         <Label Content="Dato:" HorizontalAlignment="Left" Margin="484,62,0,0" VerticalAlignment="Top"/>
