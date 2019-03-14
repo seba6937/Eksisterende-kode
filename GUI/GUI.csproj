@@ -60,6 +60,9 @@
     <Compile Include="Windows\AktuelleFejlRapporter.xaml.cs">
       <DependentUpon>AktuelleFejlRapporter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\OpretFejlmelding.xaml.cs">
+      <DependentUpon>OpretFejlmelding.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +76,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\AktuelleFejlRapporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OpretFejlmelding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
