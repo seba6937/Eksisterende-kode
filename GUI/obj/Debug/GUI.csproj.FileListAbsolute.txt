@@ -34,3 +34,26 @@ C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\GUI.csp
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\GUI.exe
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\GUI.exe.config
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\GUI.exe
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\GUI.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\Windows\AktuelleFejlRapporter.baml
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\Windows\AktuelleFejlRapporter.g.cs
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.g.cs
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\App.g.cs
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\MainWindow.baml
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.baml
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.g.resources
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.exe
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete

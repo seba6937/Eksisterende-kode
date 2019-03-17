@@ -24,6 +24,18 @@ namespace GUI.Windows
             InitializeComponent();
         }
 
+        private void TilføjFejl_Click(object sender, RoutedEventArgs e)
+        {
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            int areaId = Convert.ToInt32(this.AreaId);
+            string errorMessage = ErrorMessageBox.Text;
+            string date = DateBox.Text;
+            string extraInfo = null; // ??
+
+
+            control.CreateNewReport(areaId,errorMessage,date, extraInfo);
+        }
+
         private void Tilbage_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();

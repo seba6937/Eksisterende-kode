@@ -201,7 +201,7 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                throw new Exception("Fejl" + e.Message);
+                throw new Exception("Fejl" + " " + e.Message);
             }
             return _connectionString;
         }
