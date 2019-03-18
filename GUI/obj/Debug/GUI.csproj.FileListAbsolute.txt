@@ -57,3 +57,27 @@ C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedli
 C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.pdb
 C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe.config
 C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\GUI.exe.config
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\GUI.exe
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\GUI.pdb
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.pdb
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe.config
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\Windows\AktuelleFejlRapporter.baml
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\MainWindow.g.cs
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\Windows\AktuelleFejlRapporter.g.cs
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.g.cs
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\App.g.cs
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI_MarkupCompile.cache
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI_MarkupCompile.lref
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\MainWindow.baml
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.baml
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.g.resources
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.exe
+D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
+D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\DatabaseAccess.txt

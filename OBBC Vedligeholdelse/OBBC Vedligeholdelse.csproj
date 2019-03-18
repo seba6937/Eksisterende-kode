@@ -53,7 +53,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseAccess.txt" />
+    <Content Include="DatabaseAccess.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="FifthMenu.txt" />
     <Content Include="FirstMenu.txt" />
     <Content Include="FourthMenu.txt" />
