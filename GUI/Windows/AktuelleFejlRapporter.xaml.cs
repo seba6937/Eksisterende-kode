@@ -26,37 +26,47 @@ namespace GUI.Windows
 
         private void VisAlle_Click(object sender, RoutedEventArgs e)
         {
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(1);
 
+            // ...\seba6937\Eksisterende-kode\GUI\DatabaseAccess.txt - could not find file.
+            // Gælder for alle metoder.
         }
 
         private void VisBryst_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(2);
         }
 
         private void VisRyg_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(3);
         }
 
         private void VisMave_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(4);
         }
 
         private void VisSpinning_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(5);
         }
 
         private void VisBen_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(6);
         }
 
         private void VisArme_Click(object sender, RoutedEventArgs e)
         {
-
+            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+            control.ShowCurrentReports(7);
         }
 
         private void Tilbage_Click(object sender, RoutedEventArgs e)

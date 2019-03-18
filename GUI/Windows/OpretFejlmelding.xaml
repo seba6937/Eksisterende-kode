@@ -1,0 +1,33 @@
+﻿<Window x:Class="GUI.Windows.OpretFejlmelding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI.Windows"
+        mc:Ignorable="d"
+        Title="OpretFejlmelding" Height="450" Width="800">
+    <Grid>
+        <Button Name="RygFejl" Content="Opret ryg fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34"/>
+        <Button Name="BrystFejl" Content="Opret bryst fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,34,0,0"/>
+        <Button Name="MaveFejl" Content="Opret mave fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,68,0,0"/>
+        <Button Name="SpinningFejl" Content="Opret spinning fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,102,0,0"/>
+        <Button Name="BenFejl" Content="Opret ben fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,136,0,0"/>
+        <Button Name="ArmeFejl" Content="Opret arme fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,170,0,0"/>
+
+        <Label Name="NuværendeLabel" Content="Nuværende fejlmelding" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="342,0,0,0" Height="34" Width="178" FontSize="14"/>
+        <Label Content="Indtast ID:" HorizontalAlignment="Left" Margin="242,62,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="AreaId" HorizontalAlignment="Left" Height="23" Margin="248,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+
+        <Label Content="Dato:" HorizontalAlignment="Left" Margin="342,62,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="DateBox" HorizontalAlignment="Left" Height="23" Margin="348,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+        <CheckBox Name="DateCheckBox" Content="Nuværende dato og tid" HorizontalAlignment="Left" Margin="609,88,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Indtast Fejlmeddelelse:" HorizontalAlignment="Left" Margin="442,62,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="ErrorMessageBox" HorizontalAlignment="Left" Height="70" Margin="448,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        
+        <Button Name="TilføjFejl" Content="Tilføj fejlmelding" HorizontalAlignment="Left" Margin="679,377,0,0" VerticalAlignment="Top" Width="103" Height="32" Click="TilføjFejl_Click"/>
+
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,377,0,0" Click="Tilbage_Click"/>
+
+    </Grid>
+</Window>

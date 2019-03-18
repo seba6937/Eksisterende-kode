@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Vedligeholdelse OBBC" FontWeight="Bold" VerticalAlignment="Top" Margin="288,10,288,0" Height="44" FontSize="20"/>
+        <Label Content="Vedligeholdelse OBBC" FontWeight="Bold" VerticalAlignment="Top" Margin="288,10,256,0" Height="44" FontSize="20"/>
         <Button Name="AktuelleFejlRapporter" Content="Vis Aktuelle Fejlrapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,125,0,0" Height="39" Click="AktuelleFejlRapporter_Click"/>
         <Button Name="OpretFejl" Content="Opret Fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,169,0,0" Height="39" Click="OpretFejl_Click"/>
         <Button Name="ÆndreFejl" Content="Ændre Fejlstatus" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,213,0,0" Height="39" Click="ÆndreFejl_Click"/>
