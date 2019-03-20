@@ -254,5 +254,21 @@ namespace OBBC_Vedligeholdelse
             }
             throw new Exception("Fejl!");
         }
+        public string DeleteReport(int reportId)
+        {
+            string success = "Rapporten er slettet";
+            using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
+            {
+                try
+                {
+
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception("UPS" + e.Message);
+                }
+                return success;
+            }
+        }
     }
 }

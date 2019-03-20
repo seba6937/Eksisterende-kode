@@ -141,5 +141,9 @@ namespace OBBC_Vedligeholdelse
                     throw new Exception("Området findes ikke!");
             }
         }
+        public void DeleteReport(int reportId)
+        {
+            databaseController.DeleteReport(reportId);
+        }
     }
 }

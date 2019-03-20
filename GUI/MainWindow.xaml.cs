@@ -56,7 +56,9 @@ namespace GUI
 
         private void SletFejl_Click(object sender, RoutedEventArgs e)
         {
-
+            Windows.SletFejlmelding sletFejlmelding = new Windows.SletFejlmelding();
+            sletFejlmelding.Show();
+            this.Close();
         }
     }
 }
