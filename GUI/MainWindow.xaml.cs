@@ -53,5 +53,10 @@ namespace GUI
         {
 
         }
+
+        private void SletFejl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
