@@ -110,5 +110,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBBC Vedligeholdelse\OBBC Vedligeholdelse.csproj">
+      <Project>{A03FB643-4232-4ACB-A295-8FB7F2208F2B}</Project>
+      <Name>OBBC Vedligeholdelse</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

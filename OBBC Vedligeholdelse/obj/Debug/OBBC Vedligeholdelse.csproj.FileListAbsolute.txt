@@ -26,3 +26,18 @@ C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\OBBC Vedligeholdelse\
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csproj.CoreCompileInputs.cache
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csprojAssemblyReference.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csproj.CoreCompileInputs.cache
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
+C:\Users\513912\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\DatabaseAccess.txt
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe.config
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.pdb
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csprojAssemblyReference.cache
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csproj.CoreCompileInputs.cache
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
+D:\datamatiker\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb

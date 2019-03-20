@@ -180,7 +180,7 @@ namespace OBBC_Vedligeholdelse
             string _connectionString = null;
             try
             {
-                using (StreamReader sr = new StreamReader(@"..\..\DatabaseAccess.txt"))
+                using (StreamReader sr = new StreamReader(@"..\..\..\OBBC Vedligeholdelse\DatabaseAccess.txt"))
                 {
                     string line;
                     string[] connectionArray;
@@ -201,7 +201,7 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                throw new Exception("Fejl" + e.Message);
+                throw new Exception("Fejl" + " " + e.Message);
             }
             return _connectionString;
         }
