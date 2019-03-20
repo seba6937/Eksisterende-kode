@@ -114,3 +114,12 @@ C:\Users\emilh\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.exe
 C:\Users\emilh\Source\Repos\seba6937\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.g.cs
 C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.baml
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\bin\Debug\DatabaseAccess.txt
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.g.cs
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.g.cs
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.baml
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.baml
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete

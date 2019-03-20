@@ -24,41 +24,48 @@ namespace GUI.Windows
         public AktuelleFejlRapporter()
         {
             InitializeComponent();
-            //BreakListDownAndAddToListview(1);
+            BreakListDownAndAddToListview(1);
         }
 
         private void VisAlle_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(1);
         }
 
         private void VisBryst_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(2);
         }
 
         private void VisRyg_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(3);
         }
 
         private void VisMave_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(4);
         }
 
         private void VisSpinning_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(5);
         }
 
         private void VisBen_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(6);
         }
 
         private void VisArme_Click(object sender, RoutedEventArgs e)
         {
+            ReportView.Items.Clear();
             BreakListDownAndAddToListview(7);
         }
 
