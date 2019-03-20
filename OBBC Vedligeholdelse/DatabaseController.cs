@@ -11,7 +11,7 @@ namespace OBBC_Vedligeholdelse
 {
     public class DatabaseController
     {
-        public string GetAllCurrentReports()
+        public List<string> GetAllCurrentReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -28,7 +28,7 @@ namespace OBBC_Vedligeholdelse
                 }
             }
         }
-        public string GetSpecificCurrentReports(string area)
+        public List<string> GetSpecificCurrentReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -95,7 +95,7 @@ namespace OBBC_Vedligeholdelse
             }
         }
 
-        public string GetSpecificExtraInfoReports(string area)
+        public List<string> GetSpecificExtraInfoReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -117,7 +117,7 @@ namespace OBBC_Vedligeholdelse
             }
         }
 
-        public string GetAllExtraInfoReports()
+        public List<string> GetAllExtraInfoReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -203,8 +203,9 @@ namespace OBBC_Vedligeholdelse
             }
             return _connectionString;
         }
-        private string DatabaseReader(SqlCommand cmd)
+        private List<string> DatabaseReader(SqlCommand cmd)
         {
+            List<string> data = new List<string>();
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -217,17 +218,13 @@ namespace OBBC_Vedligeholdelse
                     string time = reader["Tidspunkt"].ToString();
                     string extraInfo = reader["ExtraInfo"].ToString();
                     string status = reader["Status"].ToString();
-                    if (status == "Gul")
+                    if (status.Equals("Gul") || status.Equals("Rød"))
                     {
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;                        
+                        string res = reportID + "/" + location + "/" + PB + "/" + time + "/" + extraInfo + "/" + status;
+                        data.Add(res);        
                     }
-                    else if (status == "Rød")
-                    {
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;                        
-                    }                    
-                }                
+                }
+                return data;
             }
             throw new Exception("Fejl!");
         }

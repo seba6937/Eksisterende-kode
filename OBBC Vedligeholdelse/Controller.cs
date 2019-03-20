@@ -9,39 +9,30 @@ namespace OBBC_Vedligeholdelse
     public class Controller
     {
         DatabaseController databaseController = new DatabaseController();
-        public void ShowCurrentReports(int areaChoice)
+        public List<string> ShowCurrentReports(int areaChoice)
         {
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllCurrentReports();                    
-                    break;
+                    return databaseController.GetAllCurrentReports();                    
                 case 2:
-                    databaseController.GetSpecificCurrentReports("Bryst");
-                    break;                
+                    return databaseController.GetSpecificCurrentReports("Bryst");               
                 case 3:
-                    databaseController.GetSpecificCurrentReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificCurrentReports("Mave");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Mave");
                 case 5:
-                    databaseController.GetSpecificCurrentReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificCurrentReports("Ben");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Ben");
                 case 7:                    
-                    databaseController.GetSpecificCurrentReports("Arme");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Arme");
                 default:
-                    databaseController.GetAllCurrentReports();
-                    break;
+                    return databaseController.GetAllCurrentReports();
             }
         }
         public void ChangeStatus(int statusChoice, int reportID)
         {
-            Console.Clear();
             switch (statusChoice)
             {
                 case 1:

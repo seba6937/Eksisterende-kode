@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -27,10 +28,21 @@ namespace GUI.Windows
 
         private void VisAlle_Click(object sender, RoutedEventArgs e)
         {
-            control.ShowCurrentReports(1);
-            
-            // ...\seba6937\Eksisterende-kode\GUI\DatabaseAccess.txt - could not find file.
-            // Gælder for alle metoder.
+            List<string> list = control.ShowCurrentReports(1);
+
+            foreach (string item in list)
+            {
+                string[] arr = item.Split('/');
+                ReportView.Items.Add(new Items
+                {
+                    RapId = arr[0],
+                    Location = arr[1],
+                    ProblemDesc = arr[2],
+                    Time = arr[3],
+                    ExtraInf = arr[4],
+                    Status = arr[5]
+                });
+            }
         }
 
         private void VisBryst_Click(object sender, RoutedEventArgs e)
@@ -69,6 +81,15 @@ namespace GUI.Windows
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
+        }
+        public class Items
+        {
+            public string RapId { get; set; }
+            public string Location { get; set; }
+            public string ProblemDesc { get; set; }
+            public string Time { get; set; }
+            public string ExtraInf { get; set; }
+            public string Status { get; set; }
         }
     }
 }

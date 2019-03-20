@@ -6,14 +6,14 @@
         mc:Ignorable="d"
         Title="AktuelleFejlRapporter" Height="450" Width="800">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="640" Margin="152,0,0,0">
+        <ListView Name="ReportView" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="630" Margin="152,0,0,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Rapport ID " DisplayMemberBinding="{Binding RapId}"/>
-                    <GridViewColumn Header="Lokation " DisplayMemberBinding="{Binding Lokation}"/>
-                    <GridViewColumn Header="Beskrivelse " DisplayMemberBinding="{Binding Beskrivelse}"/>
-                    <GridViewColumn Header="Tidspunkt " DisplayMemberBinding="{Binding Tidspunkt}"/>
-                    <GridViewColumn Header="Ektra Info " DisplayMemberBinding="{Binding Ekstra}"/>
+                    <GridViewColumn Header="Lokation " DisplayMemberBinding="{Binding Location}"/>
+                    <GridViewColumn Header="Beskrivelse " DisplayMemberBinding="{Binding ProblemDesc}"/>
+                    <GridViewColumn Header="Tidspunkt " DisplayMemberBinding="{Binding Time}"/>
+                    <GridViewColumn Header="Ektra Info " DisplayMemberBinding="{Binding ExtraInf}"/>
                     <GridViewColumn Header="Status " DisplayMemberBinding="{Binding Status}"/>
                 </GridView>
             </ListView.View>
