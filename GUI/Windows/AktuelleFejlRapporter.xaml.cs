@@ -24,12 +24,53 @@ namespace GUI.Windows
         public AktuelleFejlRapporter()
         {
             InitializeComponent();
+            //BreakListDownAndAddToListview(1);
         }
 
         private void VisAlle_Click(object sender, RoutedEventArgs e)
         {
-            List<string> list = control.ShowCurrentReports(1);
+            BreakListDownAndAddToListview(1);
+        }
 
+        private void VisBryst_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(2);
+        }
+
+        private void VisRyg_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(3);
+        }
+
+        private void VisMave_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(4);
+        }
+
+        private void VisSpinning_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(5);
+        }
+
+        private void VisBen_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(6);
+        }
+
+        private void VisArme_Click(object sender, RoutedEventArgs e)
+        {
+            BreakListDownAndAddToListview(7);
+        }
+
+        private void Tilbage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+        public void BreakListDownAndAddToListview(int reportarea)
+        {
+            List<string> list = control.ShowCurrentReports(reportarea);
             foreach (string item in list)
             {
                 string[] arr = item.Split('/');
@@ -43,44 +84,6 @@ namespace GUI.Windows
                     Status = arr[5]
                 });
             }
-        }
-
-        private void VisBryst_Click(object sender, RoutedEventArgs e)
-        {
-            control.ShowCurrentReports(2);
-        }
-
-        private void VisRyg_Click(object sender, RoutedEventArgs e)
-        {
-            control.ShowCurrentReports(3);
-        }
-
-        private void VisMave_Click(object sender, RoutedEventArgs e)
-        {
-            control.ShowCurrentReports(4);
-        }
-
-        private void VisSpinning_Click(object sender, RoutedEventArgs e)
-        {
-            control.ShowCurrentReports(5);
-        }
-
-        private void VisBen_Click(object sender, RoutedEventArgs e)
-        {
-            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
-            control.ShowCurrentReports(6);
-        }
-
-        private void VisArme_Click(object sender, RoutedEventArgs e)
-        {
-            control.ShowCurrentReports(7);
-        }
-
-        private void Tilbage_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
         }
         public class Items
         {
