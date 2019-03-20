@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.Windows"
         mc:Ignorable="d"
-        Title="OpretFejlmelding" Height="450" Width="800">
+        Title="OpretFejlmelding" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <Button Name="RygFejl" Content="Opret ryg fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34"/>
         <Button Name="BrystFejl" Content="Opret bryst fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,34,0,0"/>

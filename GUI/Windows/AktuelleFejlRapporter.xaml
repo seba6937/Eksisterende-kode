@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="AktuelleFejlRapporter" Height="450" Width="800">
+        Title="AktuelleFejlRapporter" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <ListView Name="ReportView" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="630" Margin="152,0,0,0">
             <ListView.View>
