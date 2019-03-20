@@ -18,16 +18,18 @@
         <Label Content="Indtast ID:" HorizontalAlignment="Left" Margin="242,62,0,0" VerticalAlignment="Top"/>
         <TextBox Name="AreaId" HorizontalAlignment="Left" Height="23" Margin="248,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
 
-        <Label Content="Dato:" HorizontalAlignment="Left" Margin="342,62,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="DateBox" HorizontalAlignment="Left" Height="23" Margin="348,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
-        <CheckBox Name="DateCheckBox" Content="Nuværende dato og tid" HorizontalAlignment="Left" Margin="609,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dato:" HorizontalAlignment="Left" Margin="550,67,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="DateBox" HorizontalAlignment="Left" Height="23" Margin="556,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+        <CheckBox Name="DateCheckBox" Content="Nuværende dato og tid" HorizontalAlignment="Left" Margin="556,121,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="Indtast Fejlmeddelelse:" HorizontalAlignment="Left" Margin="442,62,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="ErrorMessageBox" HorizontalAlignment="Left" Height="70" Margin="448,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
-        
+        <Label Content="Indtast Fejlmeddelelse:" HorizontalAlignment="Left" Margin="369,62,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="ErrorMessageBox" HorizontalAlignment="Left" Height="70" Margin="375,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+
         <Button Name="TilføjFejl" Content="Tilføj fejlmelding" HorizontalAlignment="Left" Margin="679,377,0,0" VerticalAlignment="Top" Width="103" Height="32" Click="TilføjFejl_Click"/>
 
         <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,377,0,0" Click="Tilbage_Click"/>
+        <Label Content="Ekstra Information:" HorizontalAlignment="Left" Margin="369,163,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="EksInfoBox" HorizontalAlignment="Left" Height="70" Margin="375,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
 
     </Grid>
 </Window>

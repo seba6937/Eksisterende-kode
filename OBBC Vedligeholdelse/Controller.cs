@@ -9,10 +9,8 @@ namespace OBBC_Vedligeholdelse
     public class Controller
     {
         DatabaseController databaseController = new DatabaseController();
-        public bool ShowCurrentReports(int areaChoice)
+        public void ShowCurrentReports(int areaChoice)
         {
-            bool success = true;
-            //Console.Clear();
             switch (areaChoice)
             {
                 case 1:
@@ -37,17 +35,12 @@ namespace OBBC_Vedligeholdelse
                     databaseController.GetSpecificCurrentReports("Arme");
                     break;
                 default:
-                    Console.WriteLine("Området findes ikke");
-                    success = false;
+                    databaseController.GetAllCurrentReports();
                     break;
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ChangeStatus(int statusChoice, int reportID)
+        public void ChangeStatus(int statusChoice, int reportID)
         {
-            bool success = true;
             Console.Clear();
             switch (statusChoice)
             {
@@ -61,18 +54,11 @@ namespace OBBC_Vedligeholdelse
                     databaseController.ChangeReportStatus(reportID, "Rød");
                     break;
                 default:
-                    Console.WriteLine("Den valgte status findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Status findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool CreateNewReport(int areaChoice, string errorReport, string date, string extraInfo)
+        public void CreateNewReport(int areaChoice, string errorReport, string date, string extraInfo)
         {
-            bool success = true;
-            Console.Clear();
             switch (areaChoice)
             {
                 case 1:                   
@@ -94,18 +80,11 @@ namespace OBBC_Vedligeholdelse
                     databaseController.CreateReport("Arme", errorReport, date, extraInfo);                    
                     break;            
                 default:
-                    Console.WriteLine("Området findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ShowOldReports(int areaChoice)
-        {
-            bool success = true;
-            Console.Clear();            
+        public void ShowOldReports(int areaChoice)
+        {           
             switch (areaChoice)
             {
                 case 1:
@@ -130,18 +109,11 @@ namespace OBBC_Vedligeholdelse
                     databaseController.GetSpecificOldReports("Arme");
                     break;
                 default:
-                    Console.WriteLine("Områdes findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ShowExtraInfoReports(int areaChoice)
+        public void ShowExtraInfoReports(int areaChoice)
         {
-            bool success = true;
-            Console.Clear();
             switch (areaChoice)
             {
                 case 1:
@@ -166,13 +138,8 @@ namespace OBBC_Vedligeholdelse
                     databaseController.GetSpecificExtraInfoReports("Arme");
                     break;
                 default:
-                    Console.WriteLine("Områdes findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
     }
 }

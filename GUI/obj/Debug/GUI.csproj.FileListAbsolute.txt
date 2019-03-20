@@ -81,3 +81,8 @@ D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.exe
 D:\datamatiker\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
 D:\datamatiker\Eksisterende-kode\GUI\bin\Debug\DatabaseAccess.txt
+C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\bin\Debug\DatabaseAccess.txt
+C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe
+C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\Users\Kenni\Desktop\Eksisterende kode\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete

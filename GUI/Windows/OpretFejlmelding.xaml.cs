@@ -19,6 +19,7 @@ namespace GUI.Windows
     /// </summary>
     public partial class OpretFejlmelding : Window
     {
+        OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
         public OpretFejlmelding()
         {
             InitializeComponent();
@@ -26,12 +27,10 @@ namespace GUI.Windows
 
         private void TilføjFejl_Click(object sender, RoutedEventArgs e)
         {
-            OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
             int areaId = Convert.ToInt32(this.AreaId);
             string errorMessage = ErrorMessageBox.Text;
             string date = DateBox.Text;
-            string extraInfo = null; // ??
-
+            string extraInfo = EksInfoBox.Text;
 
             control.CreateNewReport(areaId,errorMessage,date, extraInfo);
         }

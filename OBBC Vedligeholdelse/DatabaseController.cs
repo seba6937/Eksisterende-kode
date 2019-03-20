@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,7 @@ namespace OBBC_Vedligeholdelse
                 }
             }
         }
-        public void GetSpecificCurrentReports(string area)
+        public string GetSpecificCurrentReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -39,17 +39,17 @@ namespace OBBC_Vedligeholdelse
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeAktuelleFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                    DatabaseReader(cmd);                       
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
-                
             }
         }
         public string ChangeReportStatus(int reportID, string status)
         {
+            string success = "Reporten fik ændret status";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 
@@ -61,18 +61,18 @@ namespace OBBC_Vedligeholdelse
                     cmd.Parameters.Add(new SqlParameter("@RapportID", reportID));
                     cmd.Parameters.Add(new SqlParameter("@Status", status));
                     cmd.ExecuteReader();
-                    string success = "Reporten fik ændret status";
+
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
-                
-                throw new Exception("Fejl");
+                return success;
             }
         }
         public string CreateReport(string area,string errorReport, string date,string extraInfo)
         {
+            string success = "Rapporten blev oprettet";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 
@@ -86,14 +86,12 @@ namespace OBBC_Vedligeholdelse
                     cmd.Parameters.Add(new SqlParameter("@Tidspunkt", date));
                     cmd.Parameters.Add(new SqlParameter("@ExtraInfo", extraInfo));
                     DatabaseReader(cmd);
-                    string success = "Rapporten blev oprettet";
-                    return success;
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
-                
+                return success;
             }
         }
 
@@ -113,7 +111,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
                 
             }
@@ -132,10 +130,10 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
             }
-            throw new Exception("Fejl");
+            
         }
         public string GetSpecificOldReports(string area)
         {
@@ -153,7 +151,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
                 
             }
@@ -171,7 +169,7 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl" + e.Message);
+                    throw new Exception("Fejl! " + e.Message);
                 }
             }
         }
@@ -201,7 +199,7 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                throw new Exception("Fejl" + " " + e.Message);
+                throw new Exception("Fejl! " + e.Message);
             }
             return _connectionString;
         }
@@ -231,7 +229,7 @@ namespace OBBC_Vedligeholdelse
                     }                    
                 }                
             }
-            throw new Exception("Fejl");
+            throw new Exception("Fejl!");
         }
         private string DatabaseReaderGreen(SqlCommand cmd)
         {
@@ -254,7 +252,7 @@ namespace OBBC_Vedligeholdelse
                     }
                 }
             }
-            throw new Exception("Fejl");
+            throw new Exception("Fejl!");
         }
     }
 }

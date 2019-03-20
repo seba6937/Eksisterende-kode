@@ -9,7 +9,12 @@
         <ListView HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="640" Margin="152,0,0,0">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Rapport ID " DisplayMemberBinding="{Binding RapId}"/>
+                    <GridViewColumn Header="Lokation " DisplayMemberBinding="{Binding Lokation}"/>
+                    <GridViewColumn Header="Beskrivelse " DisplayMemberBinding="{Binding Beskrivelse}"/>
+                    <GridViewColumn Header="Tidspunkt " DisplayMemberBinding="{Binding Tidspunkt}"/>
+                    <GridViewColumn Header="Ektra Info " DisplayMemberBinding="{Binding Ekstra}"/>
+                    <GridViewColumn Header="Status " DisplayMemberBinding="{Binding Status}"/>
                 </GridView>
             </ListView.View>
         </ListView>
