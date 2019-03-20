@@ -1,10 +1,11 @@
-﻿<Window x:Class="GUI.Windows.AktuelleFejlRapporter"
+﻿<Window x:Class="GUI.Windows.Gamle_Rapporter"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI.Windows"
         mc:Ignorable="d"
-        Title="AktuelleFejlRapporter" Height="450" Width="800" ResizeMode="NoResize">
+        Title="Gamle_Rapporter" Height="450" Width="800">
     <Grid>
         <ListView Name="ReportView" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="630" Margin="152,0,0,0">
             <ListView.View>
@@ -25,8 +26,7 @@
         <Button Name="VisSpinning" Content="Spinnings-Rapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,136,0,0" Click="VisSpinning_Click"/>
         <Button Name="VisBen" Content="Ben Rapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,170,0,0" Click="VisBen_Click"/>
         <Button Name="VisArme" Content="Arme Rapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,204,0,0" Click="VisArme_Click"/>
-        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,272,0,0" Click="Tilbage_Click"/>
-        <Button Name="VisEkstra" Content="Rapporter med ektra info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,238,0,0" Click="VisEkstra_Click"/>
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,238,0,0" Click="Tilbage_Click"/>
 
     </Grid>
 </Window>

@@ -135,7 +135,7 @@ namespace OBBC_Vedligeholdelse
             }
             
         }
-        public string GetSpecificOldReports(string area)
+        public List<string> GetSpecificOldReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -146,7 +146,7 @@ namespace OBBC_Vedligeholdelse
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                    return DatabaseReaderGreen(cmd);
+                    return DatabaseReader(cmd);
 
                 }
                 catch (SqlException e)
@@ -156,7 +156,7 @@ namespace OBBC_Vedligeholdelse
                 
             }
         }
-        public string GetAllOldReports()
+        public List<string> GetAllOldReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -165,7 +165,7 @@ namespace OBBC_Vedligeholdelse
                     con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    return DatabaseReaderGreen(cmd);
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
@@ -223,31 +223,13 @@ namespace OBBC_Vedligeholdelse
                         string res = reportID + "/" + location + "/" + PB + "/" + time + "/" + extraInfo + "/" + status;
                         data.Add(res);        
                     }
-                }
-                return data;
-            }
-            throw new Exception("Fejl!");
-        }
-        private string DatabaseReaderGreen(SqlCommand cmd)
-        {
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    string reportID = reader["RapportID"].ToString();
-                    string location = reader["Lokation"].ToString();
-                    string PB = reader["ProblemBeskrivelse"].ToString();
-                    string time = reader["Tidspunkt"].ToString();
-                    string extraInfo = reader["ExtraInfo"].ToString();
-                    string status = reader["Status"].ToString();
-                    if (status == "Grøn")
+                    else if (status.Equals("Grøn"))
                     {
-                        
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;
+                        string res = reportID + "/" + location + "/" + PB + "/" + time + "/" + extraInfo + "/" + status;
+                        data.Add(res);
                     }
                 }
+                return data;
             }
             throw new Exception("Fejl!");
         }

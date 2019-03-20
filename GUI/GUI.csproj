@@ -57,8 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Items.cs" />
     <Compile Include="Windows\AktuelleFejlRapporter.xaml.cs">
       <DependentUpon>AktuelleFejlRapporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Gamle Rapporter.xaml.cs">
+      <DependentUpon>Gamle Rapporter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\OpretFejlmelding.xaml.cs">
       <DependentUpon>OpretFejlmelding.xaml</DependentUpon>
@@ -79,6 +83,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\AktuelleFejlRapporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Gamle Rapporter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

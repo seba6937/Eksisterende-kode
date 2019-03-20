@@ -123,3 +123,5 @@ C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.g
 C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\OpretFejlmelding.baml
 C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\SletFejlmelding.baml
 C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\Gamle Rapporter.g.cs
+C:\Users\kens1\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\Gamle Rapporter.baml

@@ -19,7 +19,7 @@ namespace GUI.Windows
     /// </summary>
     public partial class OpretFejlmelding : Window
     {
-        OBBC_Vedligeholdelse.Controller control = new OBBC_Vedligeholdelse.Controller();
+        OBBC_Vedligeholdelse.Application.Controller control = new OBBC_Vedligeholdelse.Application.Controller();
         public OpretFejlmelding()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace GUI.Windows
         {
             MainWindow main = new MainWindow();
             main.Show();
-            this.Close();
+            Close();
         }
     }
 }

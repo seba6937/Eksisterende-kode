@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBBC_Vedligeholdelse
+namespace OBBC_Vedligeholdelse.Application
 {
     public class Controller
     {
@@ -74,60 +74,46 @@ namespace OBBC_Vedligeholdelse
                     throw new Exception("Området findes ikke!");
             }
         }
-        public void ShowOldReports(int areaChoice)
+        public List<string> ShowOldReports(int areaChoice) //Der findes ikke gamle rapporter med ekstra??
         {           
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllOldReports();
-                    break;
+                    return databaseController.GetAllOldReports();
                 case 2:
-                    databaseController.GetSpecificOldReports("Bryst");
-                    break;
+                    return databaseController.GetSpecificOldReports("Bryst");
                 case 3:
-                    databaseController.GetSpecificOldReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificOldReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificOldReports("Mave");
-                    break;
+                    return databaseController.GetSpecificOldReports("Mave");
                 case 5:
-                    databaseController.GetSpecificOldReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificOldReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificOldReports("Ben");
-                    break;
+                    return databaseController.GetSpecificOldReports("Ben");
                 case 7:
-                    databaseController.GetSpecificOldReports("Arme");
-                    break;
+                    return databaseController.GetSpecificOldReports("Arme");
                 default:
                     throw new Exception("Området findes ikke!");
             }
         }
-        public void ShowExtraInfoReports(int areaChoice)
+        public List<string> ShowExtraInfoReports(int areaChoice)
         {
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllExtraInfoReports();
-                    break;
+                    return databaseController.GetAllExtraInfoReports();
                 case 2:
-                    databaseController.GetSpecificExtraInfoReports("Bryst");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Bryst");
                 case 3:
-                    databaseController.GetSpecificExtraInfoReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificExtraInfoReports("Mave");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Mave");
                 case 5:
-                    databaseController.GetSpecificExtraInfoReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificExtraInfoReports("Ben");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Ben");
                 case 7:
-                    databaseController.GetSpecificExtraInfoReports("Arme");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Arme");
                 default:
                     throw new Exception("Området findes ikke!");
             }

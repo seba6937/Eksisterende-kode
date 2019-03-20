@@ -29,14 +29,14 @@ namespace GUI
         {
             Windows.AktuelleFejlRapporter window = new Windows.AktuelleFejlRapporter();
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void OpretFejl_Click(object sender, RoutedEventArgs e)
         {
             Windows.OpretFejlmelding opretFejlmelding = new Windows.OpretFejlmelding();
             opretFejlmelding.Show();
-            this.Close();
+            Close();
         }
 
         private void ÆndreFejl_Click(object sender, RoutedEventArgs e)
@@ -46,7 +46,9 @@ namespace GUI
 
         private void VisGamleRapporter_Click(object sender, RoutedEventArgs e)
         {
-
+            Windows.Gamle_Rapporter gamle = new Windows.Gamle_Rapporter();
+            gamle.Show();
+            Close();
         }
 
         private void RapporterEkstraInfo_Click(object sender, RoutedEventArgs e)
@@ -58,7 +60,7 @@ namespace GUI
         {
             Windows.SletFejlmelding sletFejlmelding = new Windows.SletFejlmelding();
             sletFejlmelding.Show();
-            this.Close();
+            Close();
         }
     }
 }

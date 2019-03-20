@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -16,12 +15,12 @@ using System.Windows.Shapes;
 namespace GUI.Windows
 {
     /// <summary>
-    /// Interaction logic for AktuelleFejlRapporter.xaml
+    /// Interaction logic for Gamle_Rapporter.xaml
     /// </summary>
-    public partial class AktuelleFejlRapporter : Window
+    public partial class Gamle_Rapporter : Window
     {
         OBBC_Vedligeholdelse.Application.Controller control = new OBBC_Vedligeholdelse.Application.Controller();
-        public AktuelleFejlRapporter()
+        public Gamle_Rapporter()
         {
             InitializeComponent();
             BreakListDownAndAddToListview(1);
@@ -77,25 +76,7 @@ namespace GUI.Windows
         }
         public void BreakListDownAndAddToListview(int reportarea)
         {
-            List<string> list = control.ShowCurrentReports(reportarea);
-            foreach (string item in list)
-            {
-                string[] arr = item.Split('/');
-                ReportView.Items.Add(new Items
-                {
-                    RapId = arr[0],
-                    Location = arr[1],
-                    ProblemDesc = arr[2],
-                    Time = arr[3],
-                    ExtraInf = arr[4],
-                    Status = arr[5]
-                });
-            }
-        }
-        private void VisEkstra_Click(object sender, RoutedEventArgs e)
-        {
-            ReportView.Items.Clear();
-            List<string> list = control.ShowExtraInfoReports(1);
+            List<string> list = control.ShowOldReports(reportarea);
             foreach (string item in list)
             {
                 string[] arr = item.Split('/');

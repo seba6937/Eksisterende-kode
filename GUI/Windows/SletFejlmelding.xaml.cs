@@ -26,7 +26,7 @@ namespace GUI.Windows
 
         private void SletFejl_Click(object sender, RoutedEventArgs e)
         {
-            OBBC_Vedligeholdelse.Controller controller = new OBBC_Vedligeholdelse.Controller();
+            OBBC_Vedligeholdelse.Application.Controller controller = new OBBC_Vedligeholdelse.Application.Controller();
 
             int id = Convert.ToInt32(idDeleteReport);
 
