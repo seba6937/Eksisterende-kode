@@ -51,3 +51,11 @@ C:\Users\emilh\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\
 C:\Users\emilh\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
 C:\Users\emilh\Source\Repos\seba6937\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb
 C:\Users\kens1\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\DatabaseAccess.txt
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\DatabaseAccess.txt
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe.config
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.exe
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\bin\Debug\OBBC Vedligeholdelse.pdb
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csprojAssemblyReference.cache
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.csproj.CoreCompileInputs.cache
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.exe
+C:\Users\Kenni\Desktop\Eksisterende-kode\OBBC Vedligeholdelse\obj\Debug\OBBC Vedligeholdelse.pdb
