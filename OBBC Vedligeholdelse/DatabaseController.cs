@@ -233,20 +233,24 @@ namespace OBBC_Vedligeholdelse
             }
             throw new Exception("Fejl!");
         }
-        public string DeleteReport(int reportId)
+        public void DeleteReport(int reportId)
         {
-            string success = "Rapporten er slettet";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 try
                 {
-
+                    con.Open();
+                    if (reportId == Convert.ToInt32("@RapportID"))
+                    {
+                        SqlCommand deleteCmd = new SqlCommand("DELETE FROM ... WHERE ...");
+                        deleteCmd.ExecuteNonQuery();
+                    }
+                    con.Close();
                 }
                 catch (SqlException e)
                 {
                     throw new Exception("UPS" + e.Message);
                 }
-                return success;
             }
         }
     }
