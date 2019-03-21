@@ -75,7 +75,7 @@ namespace GUI.Windows
             main.Show();
             Close();
         }
-        public void BreakListDownAndAddToListview(int reportarea)
+        private void BreakListDownAndAddToListview(int reportarea)
         {
             List<string> list = control.ShowCurrentReports(reportarea);
             foreach (string item in list)
