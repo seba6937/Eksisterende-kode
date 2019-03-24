@@ -242,7 +242,7 @@ namespace OBBC_Vedligeholdelse
                     con.Open();
                     if (reportId == Convert.ToInt32("@RapportID"))
                     {
-                        SqlCommand deleteCmd = new SqlCommand("DELETE FROM ... WHERE ...");
+                        SqlCommand deleteCmd = new SqlCommand("DELETE FROM RapportID, Lokation, ProblemBeskrivelse, Tidspunkt, ExtraInfo, Status WHERE RapportID = @raportId");
                         deleteCmd.ExecuteNonQuery();
                     }
                     con.Close();
