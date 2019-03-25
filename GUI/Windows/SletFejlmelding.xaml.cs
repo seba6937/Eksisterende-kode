@@ -28,9 +28,16 @@ namespace GUI.Windows
         {
             OBBC_Vedligeholdelse.Application.Controller controller = new OBBC_Vedligeholdelse.Application.Controller();
 
-            int id = Convert.ToInt32(idDeleteReport);
+            int id = int.Parse(idDeleteReport.Text);
 
             controller.DeleteReport(id);
+        }
+
+        private void Tilbage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            Close();
         }
     }
 }

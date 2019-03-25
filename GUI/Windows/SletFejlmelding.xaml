@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.Windows"
         mc:Ignorable="d"
-        Title="SletFejlmelding" Height="200" Width="200" ResizeMode="NoResize">
+        Title="SletFejlmelding" Height="217.255" Width="236.078" ResizeMode="NoResize">
 
-    <Grid>
-        <Label Name="Title" Content="Slet fejlmelding" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,25,0,0"></Label>
+    <Grid Margin="0,0,-6,-7">
+        <Label Name="Title" Content="Slet fejlmelding" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,10,0,0"></Label>
         <Label Content="Indtast ID: " HorizontalAlignment="Left" Margin="20,73,0,0" VerticalAlignment="Top"/>
         <TextBox Name="idDeleteReport" HorizontalAlignment="Left" Height="23" Margin="85,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70"/>
 
-        <Button Content="Slet fejlmelding" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="SletFejl_Click"/>
+        <Button Content="Slet fejlmelding" HorizontalAlignment="Left" Margin="133,156,0,0" VerticalAlignment="Top" Width="87" Height="25" Click="SletFejl_Click"/>
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="87" Height="25" Click="Tilbage_Click"/>
 
 
     </Grid>

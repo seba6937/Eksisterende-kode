@@ -70,7 +70,7 @@ namespace OBBC_Vedligeholdelse
                 return success;
             }
         }
-        public string CreateReport(string area,string errorReport, string date,string extraInfo)
+        public string CreateReport(string area, string errorReport, string date,string extraInfo)
         {
             string success = "Rapporten blev oprettet";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
@@ -85,7 +85,7 @@ namespace OBBC_Vedligeholdelse
                     cmd.Parameters.Add(new SqlParameter("@ProblemBeskrivelse", errorReport));
                     cmd.Parameters.Add(new SqlParameter("@Tidspunkt", date));
                     cmd.Parameters.Add(new SqlParameter("@ExtraInfo", extraInfo));
-                    DatabaseReader(cmd);
+                    
                 }
                 catch (SqlException e)
                 {
@@ -240,11 +240,10 @@ namespace OBBC_Vedligeholdelse
                 try
                 {
                     con.Open();
-                    if (reportId == Convert.ToInt32("@RapportID"))
-                    {
-                        SqlCommand deleteCmd = new SqlCommand("DELETE FROM RapportID, Lokation, ProblemBeskrivelse, Tidspunkt, ExtraInfo, Status WHERE RapportID = @raportId");
-                        deleteCmd.ExecuteNonQuery();
-                    }
+                    SqlCommand cmd = new SqlCommand("DeleteReport", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ReportId", reportId));
+                    cmd.ExecuteNonQuery();
                     con.Close();
                 }
                 catch (SqlException e)
