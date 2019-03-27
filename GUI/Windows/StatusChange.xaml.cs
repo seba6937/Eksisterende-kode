@@ -27,25 +27,30 @@ namespace GUI.Windows
 
         private void ChangeStatus_Click(object sender, RoutedEventArgs e)
         {
+            bool checkParse = true;
             try
             {
                 if (!int.TryParse(IDBox.Text, out int id))
                 {
-                    MessageBox.Show("Hov hov, du må kun bruge heltal her du!");
+                    MessageBox.Show("Hov hov, ID skal være et heltal!");
+                    checkParse = false;
                 }
-                if (GreenCheck.IsChecked == true)
+                while(checkParse == true)
                 {
-                    con.ChangeStatus(1, id);
+                    if (GreenCheck.IsChecked == true)
+                    {
+                        con.ChangeStatus(1, id);
+                    }
+                    else if (YellowCheck.IsChecked == true)
+                    {
+                        con.ChangeStatus(2, id);
+                    }
+                    else if (RedCheck.IsChecked == true)
+                    {
+                        con.ChangeStatus(3, id);
+                    }
+                    MessageBox.Show(string.Format("Status er blevet ændret for rapporten med ID: {0}", id));
                 }
-                else if (YellowCheck.IsChecked == true)
-                {
-                    con.ChangeStatus(2, id);
-                }
-                else if (RedCheck.IsChecked == true)
-                {
-                    con.ChangeStatus(3, id);
-                }
-                MessageBox.Show(string.Format("Status er blevet ændret for rapporten med ID: {0}", id));
             }
             catch (Exception ex)
             {
