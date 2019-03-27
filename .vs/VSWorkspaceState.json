@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GUI"
   ],
-  "SelectedNode": "\\OBBC Vedligeholdelse.sln",
+  "SelectedNode": "\\GUI\\GUI.csproj",
   "PreviewInSolutionExplorer": false
 }
