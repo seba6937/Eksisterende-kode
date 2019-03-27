@@ -41,7 +41,9 @@ namespace GUI
 
         private void ÆndreFejl_Click(object sender, RoutedEventArgs e)
         {
-
+            Windows.StatusChange SC = new Windows.StatusChange();
+            SC.Show();
+            Close();
         }
 
         private void VisGamleRapporter_Click(object sender, RoutedEventArgs e)

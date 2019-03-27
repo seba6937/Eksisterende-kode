@@ -61,6 +61,9 @@
     <Compile Include="Windows\AktuelleFejlRapporter.xaml.cs">
       <DependentUpon>AktuelleFejlRapporter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StatusChange.xaml.cs">
+      <DependentUpon>StatusChange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Gamle Rapporter.xaml.cs">
       <DependentUpon>Gamle Rapporter.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\AktuelleFejlRapporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StatusChange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

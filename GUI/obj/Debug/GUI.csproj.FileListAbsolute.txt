@@ -153,3 +153,5 @@ C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CoreCompileInp
 C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.exe
 C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\GUI.pdb
+C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\StatusChange.g.cs
+C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\Windows\StatusChange.baml

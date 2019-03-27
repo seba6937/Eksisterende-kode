@@ -47,28 +47,18 @@ namespace OBBC_Vedligeholdelse
                 }
             }
         }
-        public string ChangeReportStatus(int reportID, string status)
+        public void ChangeReportStatus(int reportID, string status)
         {
-            string success = "Reporten fik ændret status";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
-                
-                try
-                {
                     con.Open();
                     SqlCommand cmd = new SqlCommand("ÆndreStatus", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@RapportID", reportID));
                     cmd.Parameters.Add(new SqlParameter("@Status", status));
                     cmd.ExecuteReader();
-
-                }
-                catch (SqlException e)
-                {
-                    throw new Exception("Fejl! " + e.Message);
-                }
-                return success;
             }
+            
         }
         public string CreateReport(string area, string errorReport, string date,string extraInfo)
         {

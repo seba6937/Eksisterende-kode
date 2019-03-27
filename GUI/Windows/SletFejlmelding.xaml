@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.Windows"
         mc:Ignorable="d"
-        Title="SletFejlmelding" Height="217.255" Width="236.078" ResizeMode="NoResize">
+        Title="SletFejlmelding" Height="216.471" Width="232.156" ResizeMode="NoResize">
 
     <Grid Margin="0,0,-6,-7">
         <Label Name="Title" Content="Slet fejlmelding" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,10,0,0"></Label>

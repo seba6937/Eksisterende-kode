@@ -27,7 +27,7 @@
 
         <Button Name="TilføjFejl" Content="Tilføj fejlmelding" HorizontalAlignment="Left" Margin="679,377,0,0" VerticalAlignment="Top" Width="103" Height="32" Click="TilføjFejl_Click"/>
 
-        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Height="34" Margin="0,377,0,0" Click="Tilbage_Click"/>
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="32" Margin="10,377,0,0" Click="Tilbage_Click"/>
         <Label Content="Ekstra Information:" HorizontalAlignment="Left" Margin="369,163,0,0" VerticalAlignment="Top"/>
         <TextBox Name="EksInfoBox" HorizontalAlignment="Left" Height="70" Margin="375,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
 
