@@ -13,7 +13,6 @@
         <Button Name="ÆndreFejl" Content="Ændre Fejlstatus" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,170,0,0" Height="39" Click="ÆndreFejl_Click"/>
         <Button Name="SletFejl" Content="Slet Fejlmelding" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,215,0,0" Height="39" Click="SletFejl_Click"/>
         <Button Name="VisGamleRapporter" Content="Vis Gamle Rapporter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,260,0,0" Height="39" Click="VisGamleRapporter_Click"/>
-        <Button Name="RapporterEkstraInfo" Content="Vis Rapporter med ekstra Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="314,305,0,0" Height="39" Click="RapporterEkstraInfo_Click"/>
 
     </Grid>
 </Window>

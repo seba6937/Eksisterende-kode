@@ -54,7 +54,7 @@ namespace GUI.Windows
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Der skete en fejl " + ex.Message);
+                MessageBox.Show("Der skete en fejl! \n" + ex.Message);
             }
         }
 

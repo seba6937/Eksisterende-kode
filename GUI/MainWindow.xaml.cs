@@ -53,11 +53,6 @@ namespace GUI
             Close();
         }
 
-        private void RapporterEkstraInfo_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void SletFejl_Click(object sender, RoutedEventArgs e)
         {
             Windows.SletFejlmelding sletFejlmelding = new Windows.SletFejlmelding();
