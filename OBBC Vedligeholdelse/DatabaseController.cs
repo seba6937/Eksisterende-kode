@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace OBBC_Vedligeholdelse
 {
     public class DatabaseController
     {
-        public string GetAllCurrentReports()
+        public List<string> GetAllCurrentReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -24,11 +24,11 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("UPS");
+                    throw new Exception("UPS" + e.Message);
                 }
             }
         }
-        public void GetSpecificCurrentReports(string area)
+        public List<string> GetSpecificCurrentReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -39,40 +39,30 @@ namespace OBBC_Vedligeholdelse
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeAktuelleFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                    DatabaseReader(cmd);                       
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
-                
             }
         }
-        public string ChangeReportStatus(int reportID, string status)
+        public void ChangeReportStatus(int reportID, string status)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
-                
-                try
-                {
                     con.Open();
                     SqlCommand cmd = new SqlCommand("ÆndreStatus", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@RapportID", reportID));
                     cmd.Parameters.Add(new SqlParameter("@Status", status));
                     cmd.ExecuteReader();
-                    string success = "Reporten fik ændret status";
-                }
-                catch (SqlException e)
-                {
-                    throw new Exception("Fejl");
-                }
-                
-                throw new Exception("Fejl");
             }
+            
         }
-        public string CreateReport(string area,string errorReport, string date,string extraInfo)
+        public string CreateReport(string area, string errorReport, string date,string extraInfo)
         {
+            string success = "Rapporten blev oprettet";
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
                 
@@ -85,19 +75,17 @@ namespace OBBC_Vedligeholdelse
                     cmd.Parameters.Add(new SqlParameter("@ProblemBeskrivelse", errorReport));
                     cmd.Parameters.Add(new SqlParameter("@Tidspunkt", date));
                     cmd.Parameters.Add(new SqlParameter("@ExtraInfo", extraInfo));
-                    DatabaseReader(cmd);
-                    string success = "Rapporten blev oprettet";
-                    return success;
+                    
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
-                
+                return success;
             }
         }
 
-        public string GetSpecificExtraInfoReports(string area)
+        public List<string> GetSpecificExtraInfoReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -113,13 +101,13 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
                 
             }
         }
 
-        public string GetAllExtraInfoReports()
+        public List<string> GetAllExtraInfoReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -132,12 +120,12 @@ namespace OBBC_Vedligeholdelse
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
             }
-            throw new Exception("Fejl");
+            
         }
-        public string GetSpecificOldReports(string area)
+        public List<string> GetSpecificOldReports(string area)
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -148,17 +136,17 @@ namespace OBBC_Vedligeholdelse
                     SqlCommand cmd = new SqlCommand("VisSpecifikkeRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Lokation", area));
-                    return DatabaseReaderGreen(cmd);
+                    return DatabaseReader(cmd);
 
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
                 
             }
         }
-        public string GetAllOldReports()
+        public List<string> GetAllOldReports()
         {
             using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
             {
@@ -167,11 +155,11 @@ namespace OBBC_Vedligeholdelse
                     con.Open();
                     SqlCommand cmd = new SqlCommand("VisAlleRepareredeFejlRapporter", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    return DatabaseReaderGreen(cmd);
+                    return DatabaseReader(cmd);
                 }
                 catch (SqlException e)
                 {
-                    throw new Exception("Fejl");
+                    throw new Exception("Fejl! " + e.Message);
                 }
             }
         }
@@ -180,7 +168,7 @@ namespace OBBC_Vedligeholdelse
             string _connectionString = null;
             try
             {
-                using (StreamReader sr = new StreamReader(@"..\..\DatabaseAccess.txt"))
+                using (StreamReader sr = new StreamReader(@"..\..\..\OBBC Vedligeholdelse\DatabaseAccess.txt"))
                 {
                     string line;
                     string[] connectionArray;
@@ -201,12 +189,13 @@ namespace OBBC_Vedligeholdelse
             }
             catch (Exception e)
             {
-                throw new Exception("Fejl");
+                throw new Exception("Fejl! " + e.Message);
             }
             return _connectionString;
         }
-        private string DatabaseReader(SqlCommand cmd)
+        private List<string> DatabaseReader(SqlCommand cmd)
         {
+            List<string> data = new List<string>();
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -219,42 +208,39 @@ namespace OBBC_Vedligeholdelse
                     string time = reader["Tidspunkt"].ToString();
                     string extraInfo = reader["ExtraInfo"].ToString();
                     string status = reader["Status"].ToString();
-                    if (status == "Gul")
+                    if (status.Equals("Gul") || status.Equals("Rød"))
                     {
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;                        
+                        string res = reportID + "/" + location + "/" + PB + "/" + time + "/" + extraInfo + "/" + status;
+                        data.Add(res);        
                     }
-                    else if (status == "Rød")
+                    else if (status.Equals("Grøn"))
                     {
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;                        
-                    }                    
-                }                
-            }
-            throw new Exception("Fejl");
-        }
-        private string DatabaseReaderGreen(SqlCommand cmd)
-        {
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    string reportID = reader["RapportID"].ToString();
-                    string location = reader["Lokation"].ToString();
-                    string PB = reader["ProblemBeskrivelse"].ToString();
-                    string time = reader["Tidspunkt"].ToString();
-                    string extraInfo = reader["ExtraInfo"].ToString();
-                    string status = reader["Status"].ToString();
-                    if (status == "Grøn")
-                    {
-                        
-                        string res = "RapportID: {reportID} \nLokation: {location} \nProblembeskrivelse: {PB} \nTidspunkt:  {time} \nExtra Info: {extraInfo}";
-                        return res;
+                        string res = reportID + "/" + location + "/" + PB + "/" + time + "/" + extraInfo + "/" + status;
+                        data.Add(res);
                     }
                 }
+                return data;
             }
-            throw new Exception("Fejl");
+            throw new Exception("Fejl!");
+        }
+        public void DeleteReport(int reportId)
+        {
+            using (SqlConnection con = new SqlConnection(DynamicConnectionString()))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("DeleteReport", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ReportId", reportId));
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception("UPS" + e.Message);
+                }
+            }
         }
     }
 }

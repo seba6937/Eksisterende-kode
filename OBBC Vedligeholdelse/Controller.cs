@@ -4,51 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBBC_Vedligeholdelse
+namespace OBBC_Vedligeholdelse.Application
 {
     public class Controller
     {
         DatabaseController databaseController = new DatabaseController();
-        public bool ShowCurrentReports(int areaChoice)
+        public List<string> ShowCurrentReports(int areaChoice)
         {
-            bool success = true;
-            Console.Clear();
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllCurrentReports();                    
-                    break;
+                    return databaseController.GetAllCurrentReports();                    
                 case 2:
-                    databaseController.GetSpecificCurrentReports("Bryst");
-                    break;                
+                    return databaseController.GetSpecificCurrentReports("Bryst");               
                 case 3:
-                    databaseController.GetSpecificCurrentReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificCurrentReports("Mave");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Mave");
                 case 5:
-                    databaseController.GetSpecificCurrentReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificCurrentReports("Ben");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Ben");
                 case 7:                    
-                    databaseController.GetSpecificCurrentReports("Arme");
-                    break;
+                    return databaseController.GetSpecificCurrentReports("Arme");
                 default:
-                    Console.WriteLine("Området findes ikke");
-                    success = false;
-                    break;
+                    return databaseController.GetAllCurrentReports();
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ChangeStatus(int statusChoice, int reportID)
+        public void ChangeStatus(int statusChoice, int reportID)
         {
-            bool success = true;
-            Console.Clear();
             switch (statusChoice)
             {
                 case 1:
@@ -61,18 +45,11 @@ namespace OBBC_Vedligeholdelse
                     databaseController.ChangeReportStatus(reportID, "Rød");
                     break;
                 default:
-                    Console.WriteLine("Den valgte status findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Status findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool CreateNewReport(int areaChoice, string errorReport, string date, string extraInfo)
+        public void CreateNewReport(int areaChoice, string errorReport, string date, string extraInfo)
         {
-            bool success = true;
-            Console.Clear();
             switch (areaChoice)
             {
                 case 1:                   
@@ -94,85 +71,56 @@ namespace OBBC_Vedligeholdelse
                     databaseController.CreateReport("Arme", errorReport, date, extraInfo);                    
                     break;            
                 default:
-                    Console.WriteLine("Området findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ShowOldReports(int areaChoice)
-        {
-            bool success = true;
-            Console.Clear();            
+        public List<string> ShowOldReports(int areaChoice) //Der findes ikke gamle rapporter med ekstra??
+        {           
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllOldReports();
-                    break;
+                    return databaseController.GetAllOldReports();
                 case 2:
-                    databaseController.GetSpecificOldReports("Bryst");
-                    break;
+                    return databaseController.GetSpecificOldReports("Bryst");
                 case 3:
-                    databaseController.GetSpecificOldReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificOldReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificOldReports("Mave");
-                    break;
+                    return databaseController.GetSpecificOldReports("Mave");
                 case 5:
-                    databaseController.GetSpecificOldReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificOldReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificOldReports("Ben");
-                    break;
+                    return databaseController.GetSpecificOldReports("Ben");
                 case 7:
-                    databaseController.GetSpecificOldReports("Arme");
-                    break;
+                    return databaseController.GetSpecificOldReports("Arme");
                 default:
-                    Console.WriteLine("Områdes findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
         }
-        public bool ShowExtraInfoReports(int areaChoice)
+        public List<string> ShowExtraInfoReports(int areaChoice)
         {
-            bool success = true;
-            Console.Clear();
             switch (areaChoice)
             {
                 case 1:
-                    databaseController.GetAllExtraInfoReports();
-                    break;
+                    return databaseController.GetAllExtraInfoReports();
                 case 2:
-                    databaseController.GetSpecificExtraInfoReports("Bryst");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Bryst");
                 case 3:
-                    databaseController.GetSpecificExtraInfoReports("Ryg");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Ryg");
                 case 4:
-                    databaseController.GetSpecificExtraInfoReports("Mave");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Mave");
                 case 5:
-                    databaseController.GetSpecificExtraInfoReports("Spinning");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Spinning");
                 case 6:
-                    databaseController.GetSpecificExtraInfoReports("Ben");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Ben");
                 case 7:
-                    databaseController.GetSpecificExtraInfoReports("Arme");
-                    break;
+                    return databaseController.GetSpecificExtraInfoReports("Arme");
                 default:
-                    Console.WriteLine("Områdes findes ikke");
-                    success = false;
-                    break;
+                    throw new Exception("Området findes ikke!");
             }
-            Console.ReadLine();
-            Console.Clear();
-            return success;
+        }
+        public void DeleteReport(int reportId)
+        {
+            databaseController.DeleteReport(reportId);
         }
     }
 }

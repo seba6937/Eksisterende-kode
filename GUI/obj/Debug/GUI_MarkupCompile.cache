@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sthor\Source\Repos\Eksisterende-kode\GUI\obj\Debug\
+C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\obj\Debug\
 GUI
 none
 false
 DEBUG;TRACE
-C:\Users\Sthor\Source\Repos\Eksisterende-kode\GUI\App.xaml
-21598073608
+C:\Users\Kenni\Desktop\Eksisterende-kode\GUI\App.xaml
+6911228668
 
-6-883313040
-151984215308
-MainWindow.xaml;Windows\AktuelleFejlRapporter.xaml;
+111728663747
+161642912604
+MainWindow.xaml;Windows\AktuelleFejlRapporter.xaml;Windows\StatusChange.xaml;Windows\Gamle Rapporter.xaml;Windows\OpretFejlmelding.xaml;Windows\SletFejlmelding.xaml;
 
 False
 

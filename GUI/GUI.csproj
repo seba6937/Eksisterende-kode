@@ -57,8 +57,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Items.cs" />
     <Compile Include="Windows\AktuelleFejlRapporter.xaml.cs">
       <DependentUpon>AktuelleFejlRapporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatusChange.xaml.cs">
+      <DependentUpon>StatusChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Gamle Rapporter.xaml.cs">
+      <DependentUpon>Gamle Rapporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OpretFejlmelding.xaml.cs">
+      <DependentUpon>OpretFejlmelding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SletFejlmelding.xaml.cs">
+      <DependentUpon>SletFejlmelding.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +86,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\AktuelleFejlRapporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StatusChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Gamle Rapporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OpretFejlmelding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SletFejlmelding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,6 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBBC Vedligeholdelse\OBBC Vedligeholdelse.csproj">
+      <Project>{A03FB643-4232-4ACB-A295-8FB7F2208F2B}</Project>
+      <Name>OBBC Vedligeholdelse</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

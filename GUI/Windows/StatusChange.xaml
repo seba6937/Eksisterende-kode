@@ -1,0 +1,19 @@
+﻿<Window x:Class="GUI.Windows.StatusChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI.Windows"
+        mc:Ignorable="d"
+        Title="StatusChange" Height="298.5" Width="291.5">
+    <Grid Margin="0,0,2,1">
+        <Button Name="ChangeStatus" Content="Ændre Status" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="198,236,0,0" Click="ChangeStatus_Click"/>
+        <TextBox Name="IDBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Margin="10,36,0,0"/>
+        <Label Content="Vælg Rapport ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0"/>
+        <Label Content="Vælg ny status:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,64,0,0"/>
+        <Button Name="Tilbage" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,236,0,0" Click="Tilbage_Click"/>
+        <RadioButton Name="RedCheck" Content="Rød" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="YellowCheck" Content="Gul" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="GreenCheck" Content="Grøn" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
